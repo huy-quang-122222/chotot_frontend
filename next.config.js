@@ -1,4 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+require('dotenv').config();
 
-module.exports = nextConfig
+module.exports = {
+  publicRuntimeConfig: {
+    API_BASE_URL: process.env.API_BASE_URL || 'http://localhost:8000/api/',
+  },
+};
